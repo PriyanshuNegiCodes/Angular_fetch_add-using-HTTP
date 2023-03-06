@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { NoteServicesService } from '../services/note-services.service';
 
 @Component({
   selector: 'app-search',
@@ -8,11 +9,20 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class SearchComponent {
   @Output()
 
-  eventObj=new EventEmitter();
+  // eventObj=new EventEmitter();
   searchName="";
-  searchNote(){
-    this.eventObj.emit(this.searchName);
-    // this.searchName="";
+  // searchNote(){
+  //   this.eventObj.emit(this.searchName);
+  //   this.searchName="";
+
+  // }
+  
+  constructor(private myService:NoteServicesService){
 
   }
+  searchNote(){
+    this.myService.onChanges(this.searchName)
+  }
+
+  
 }

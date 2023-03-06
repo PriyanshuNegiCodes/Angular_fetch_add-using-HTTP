@@ -6,8 +6,18 @@ import { INote } from '../keep-Note-data/Note';
   providedIn: 'root'
 })
 export class NoteServicesService {
+  temp:string="";
+  onChanges(titleVal:string){
+    // this.temp=
+    alert("asdfdasfds");
+    alert(titleVal)
+  }
+
    constructor( private http:HttpClient) { }
    getNotes():Observable<INote[]>{
+    if(this.temp===""){
+     return this.http.get<INote[]>('http://localhost:3000/notes')
+    } 
     return this.http.get<INote[]>('http://localhost:3000/notes')
    }
 
