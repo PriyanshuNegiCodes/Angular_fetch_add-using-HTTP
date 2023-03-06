@@ -9,20 +9,13 @@ import { NoteServicesService } from '../services/note-services.service';
 export class SearchComponent {
   @Output()
 
-  // eventObj=new EventEmitter();
   searchName="";
-  // searchNote(){
-  //   this.eventObj.emit(this.searchName);
-  //   this.searchName="";
-
-  // }
-  
+ 
   constructor(private myService:NoteServicesService){
 
   }
   searchNote(changedSearch:string){
-    this.myService.onChanges(changedSearch)
+    this.myService.temp=changedSearch;
   }
-
-  
+ 
 }
