@@ -12,6 +12,7 @@ export class SearchComponent {
   searchName="";
   searchNote(){
     this.eventObj.emit(this.searchName);
-    alert(this.searchName)
+    // this.searchName="";
+
   }
 }
