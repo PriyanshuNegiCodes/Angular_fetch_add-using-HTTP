@@ -7,6 +7,9 @@ import { AddNoteComponent } from './add-note/add-note.component';
 import { FetchNotesComponent } from './fetch-notes/fetch-notes.component';
 import { SearchComponent } from './search/search.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

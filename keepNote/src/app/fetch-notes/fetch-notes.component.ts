@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NoteServicesService } from '../services/note-services.service';
 
 @Component({
   selector: 'app-fetch-notes',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class FetchNotesComponent {
   receiveDataList:any
-  
+  constructor (private myService: NoteServicesService){
+  }
+  ngOnInit(){
+    this.receiveDataList=this.myService.getNotes().subscribe(data=>this.receiveDataList=data)
+  }
 }
