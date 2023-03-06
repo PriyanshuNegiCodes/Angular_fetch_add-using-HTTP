@@ -20,8 +20,8 @@ export class SearchComponent {
   constructor(private myService:NoteServicesService){
 
   }
-  searchNote(){
-    this.myService.onChanges(this.searchName)
+  searchNote(changedSearch:string){
+    this.myService.onChanges(changedSearch)
   }
 
   

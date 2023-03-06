@@ -8,8 +8,7 @@ import { INote } from '../keep-Note-data/Note';
 export class NoteServicesService {
   temp:string="";
   onChanges(titleVal:string){
-    // this.temp=
-    alert("asdfdasfds");
+   
     alert(titleVal)
   }
 

@@ -1,5 +1,4 @@
 <div class="d-flex" role="search">
-    <input type="text" placeholder="Search" aria-label="Search" [(ngModel)]="searchName">
-    <button class="btn btn-success" type="button" (click)="searchNote()">Search</button>
+    <input type="text" placeholder="Search" aria-label="Search" [(ngModel)]="searchName" (ngModelChange)="searchNote($event)">
+    <!-- <button class="btn btn-success" type="button" (click)="searchNote()">Search</button> -->
 </div>
-  
