@@ -3,15 +3,15 @@
     <div class="card-body">
       <div class="form-row">
         <div class="col">
-          <input type="text" class="form-control input" placeholder="Note Id">
+          <input type="text" class="form-control input" placeholder="Note Id" [(ngModel)]="NoteData.Id" disabled="">
         </div>
         <div class="col">
-          <input type="text" class="form-control input" placeholder="Note Title" >
+          <input type="text" class="form-control input" placeholder="Note Title" [(ngModel)]="NoteData.title">
         </div>
       </div>
       <div class="form-group mt-3">
-        <textarea class="form-control input" placeholder="Note Content" ></textarea>
+        <textarea class="form-control input" placeholder="Note Content" [(ngModel)]="NoteData.content" ></textarea>
       </div>
-      <button type="button" class="btn btn-light" >Save</button>
+      <button type="button" class="btn btn-light" (click)="AddNote()" >Save</button>
     </div>
   </div>
