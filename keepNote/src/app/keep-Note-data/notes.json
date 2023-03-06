@@ -24,6 +24,11 @@
       "id": 5,
       "title": "refactor challenge",
       "content": "make design responsive and add comments in code"
+    },
+    {
+      "id": 6,
+      "title": "Injectable Decorator",
+      "content": "The @Injectable() decorator defines a class as a service in Angular and allows Angular to inject it into a component as a dependency. Likewise, the @Injectable() decorator indicates that a component, class, pipe, or NgModule has a dependency on a service. The injector is the main mechanism."
     }
   ]
 }
