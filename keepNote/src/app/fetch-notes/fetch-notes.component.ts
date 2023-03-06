@@ -13,4 +13,6 @@ export class FetchNotesComponent {
   ngOnInit(){
     this.receiveDataList=this.myService.getNotes().subscribe(data=>this.receiveDataList=data)
   }
+  
+
 }

@@ -11,4 +11,7 @@ export class NoteServicesService {
     return this.http.get<INote[]>('http://localhost:3000/notes')
    }
 
+   AddNotes(NoteData:INote){
+    return this.http.post<INote>('http://localhost:3000/notes', NoteData)
+   }
 }
