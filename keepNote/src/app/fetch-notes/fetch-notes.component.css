@@ -1,0 +1,12 @@
+.card-title{
+    margin-top: 10px;
+    margin-bottom: 20%;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  .card{
+    transition: all 0.5s ease-out;
+  }
