@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { NoteServicesService } from '../services/note-services.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { NoteServicesService } from '../services/note-services.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  @Output()
+  
 
   searchName="";
  

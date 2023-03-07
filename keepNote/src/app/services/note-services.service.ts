@@ -30,6 +30,21 @@ export class NoteServicesService {
      );
     }
   }
+  getNotes1(): Observable<INote[]> {
+    let temporary=this.temp
+    if (this.temp == "") {
+      // alert("if working")
+      return this.http.get<INote[]>('http://localhost:3000/notes');
+    } else{
+     
+      alert(temporary)
+      return this.http.get<INote[]>('http://localhost:3000/notes')
+    .pipe(
+            map(notes => notes.filter(note => note.title.startsWith(temporary)))
+     );
+    }
+  }
+
 
 
 
