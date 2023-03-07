@@ -15,7 +15,8 @@ export class SearchComponent {
 
   }
   searchNote(changedSearch:string){
-    this.myService.temp=changedSearch;
+    // this.myService.temp=changedSearch;
+    this.myService.onChange(changedSearch)
   }
  
 }
